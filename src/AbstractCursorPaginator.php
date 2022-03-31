@@ -27,7 +27,7 @@ abstract class AbstractCursorPaginator implements Htmlable
      *
      * @var \Illuminate\Support\Collection
      */
-    protected $items;
+    public $items;
 
     /**
      * The number of items to be shown per page.
@@ -200,7 +200,7 @@ abstract class AbstractCursorPaginator implements Htmlable
      */
     public function getParametersForItem($item)
     {
-        return collect($this->parameters)
+        return collect(array_filter($this->parameters))
             ->flip()
             ->map(function ($_, $parameterName) use ($item) {
                 if ($item instanceof JsonResource) {

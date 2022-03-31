@@ -17,7 +17,7 @@
     ],
     "require": {
         "php": "^7.2|^8.0",
-        "vanthao03596/laravel-package-tools": "^2.0",
+        "vanthao03596/laravel-package-tools": "dev-master",
         "illuminate/database": "^6.10.0|^7",
         "illuminate/support": "^6.10.0|^7"
     },
@@ -56,5 +56,11 @@
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "path",
+            "url": "https://github.com/rmunizsanchez/laravel-package-tools"
+        }
+    ]
 }
